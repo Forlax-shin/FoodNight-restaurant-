@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "fir-interaktive-web-rian-4a3bb",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
