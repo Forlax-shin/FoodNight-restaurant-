@@ -3,12 +3,12 @@ const RestaurantApp = {
     // Configuration
     config: {
         firebaseConfig: {
-            apiKey: "YOUR_FIREBASE_API_KEY",
-            authDomain: "YOUR_PROJECT.firebaseapp.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_PROJECT.appspot.com",
-            messagingSenderId: "YOUR_SENDER_ID",
-            appId: "YOUR_APP_ID"
+            apiKey: "AIzaSyAjOIquX2hmKOTNzpdGqJghVvmidlR_np4",
+            authDomain: "fir-interaktive-web-rian.firebaseapp.com",
+            projectId: "fir-interaktive-web-rian",
+            storageBucket: "fir-interaktive-web-rian.firebasestorage.app",
+            messagingSenderId: "384829764040",
+            appId: "1:384829764040:web:78b0c600259b340cce10fd"
         },
         TAX_PERCENTAGE: 10, // 10% tax
         SERVICE_FEE_PERCENTAGE: 5, // 5% service fee
