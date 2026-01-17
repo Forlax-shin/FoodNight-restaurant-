@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grand Bistro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero">
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="id">ID</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
+            <button class="lang-btn" data-lang="zh">中文</button>
+        </div>
+        <h1>THE GRAND <span>BISTRO</span></h1>
+        <p class="tagline" data-key="tagline">Rasa Otentik, Sentuhan Modern.</p>
+        <div class="hero-buttons">
+            <button onclick="scrollToMenu()"><i class="fas fa-utensils"></i> <span data-key="view_menu">Lihat Menu</span></button>
+            <button class="gold" onclick="toggleBag()"><i class="fas fa-shopping-bag"></i> <span data-key="order_now">Pesan Sekarang</span></button>
+        </div>
+    </header>
+
+    <!-- Category Filters -->
+    <div class="categories" id="categoryFilters">
+        <button class="cat-btn active" onclick="RestaurantApp.renderMenu('all')" data-key="all_menu">SEMUA MENU</button>
+    </div>
+
+    <!-- Menu -->
+    <main class="menu-container">
+        <div class="menu-grid" id="menuGrid">
+            <div class="loading-container">
+                <div class="loading-spinner"></div>
+                <p data-key="loading_menu">Memuat menu...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Divider 1 -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon">
+            <i class="fas fa-utensils"></i>
+        </div>
+        <div class="divider-line"></div>
+    </div>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2><i class="fas fa-concierge-bell"></i> <span data-key="how_it_works">CARA PEMESANAN</span></h2>
+        <div class="steps">
+            <div class="step">
+                <div>1</div>
+                <i class="fas fa-search"></i>
+                <h3 data-key="step1">Lihat Menu</h3>
+                <p data-key="step1_desc">Jelajahi hidangan eksklusif kami</p>
+            </div>
+            <div class="step">
+                <div>2</div>
+                <i class="fas fa-shopping-bag"></i>
+                <h3 data-key="step2">Tambahkan ke Keranjang</h3>
+                <p data-key="step2_desc">Pilih favorit Anda</p>
+            </div>
+            <div class="step">
+                <div>3</div>
+                <i class="fas fa-clipboard-check"></i>
+                <h3 data-key="step3">Pilih Metode</h3>
+                <p data-key="step3_desc">Makan di tempat, Reservasi, atau Bawa pulang</p>
+            </div>
+            <div class="step">
+                <div>4</div>
+                <i class="fas fa-credit-card"></i>
+                <h3 data-key="step4">Bayar & Checkout</h3>
+                <p data-key="step4_desc">Selesaikan pembayaran & dapatkan invoice via email</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider 2 -->
+    <div class="section-divider gold">
+        <div class="divider-line"></div>
+        <div class="divider-icon">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-line"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">THE GRAND BISTRO</div>
+                <p data-key="footer_desc">Pengalaman makan eksklusif dimana tradisi bertemu inovasi.</p>
+                <div class="social">
+                    <a href="https://instagram.com/grandbistro" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/grandbistro" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/628123456789" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://tiktok.com/@grandbistro" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 data-key="location_title">Lokasi</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Kemang Raya No. 123, Jakarta Selatan</p>
+                <p class="footer-subtext">Indonesia 12730</p>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613506864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390897b759%3A0x6b45e67356080477!2sJl.%20Kemang%20Raya%20No.123%2C%20RT.6%2FRW.1%2C%20Bangka%2C%20Kec.%20Mampang%20Prpt.%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012730!5e0!3m2!1sid!2sid!4v1648012345678!5m2!1sid!2sid" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 data-key="contact_title">Kontak & Jam Operasi</h3>
+                <p><i class="fas fa-phone"></i> <a href="tel:+622112345678" class="contact-link">(021) 1234-5678</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/628123456789" target="_blank" class="contact-link">+62 812 3456 789</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:rsvp@grandbistro.com" class="contact-link">rsvp@grandbistro.com</a></p>
+                <p><i class="fas fa-clock"></i> 10:00 - 22:00 (Setiap Hari)</p>
+                
+                <div class="payment-methods">
+                    <h4 data-key="payment_methods">Metode Pembayaran</h4>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa" title="Visa"></i>
+                        <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                        <i class="fab fa-cc-amex" title="American Express"></i>
+                        <i class="fas fa-university" title="Transfer Bank"></i>
+                        <i class="fab fa-paypal" title="PayPal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="admin.html"><i class="fas fa-lock"></i> <span data-key="admin_portal">PORTAL ADMIN</span></a>
+            <p>&copy; 2024 The Grand Bistro. <span data-key="all_rights">Semua hak dilindungi.</span></p>
+        </div>
+    </footer>
+
+    <!-- Shopping Bag Trigger -->
+    <div class="bag-trigger" onclick="toggleBag()">
+        <i class="fas fa-shopping-bag"></i>
+        <span id="bagCount">0</span>
+    </div>
+
+    <!-- Bag Overlay -->
+    <div class="bag-overlay" onclick="toggleBag()"></div>
+    
+    <!-- Shopping Bag Sidebar -->
+    <aside class="bag-sidebar">
+        <div class="bag-header">
+            <h2><i class="fas fa-shopping-bag"></i> <span data-key="your_selection">PILIHAN ANDA</span></h2>
+            <button class="close-btn" onclick="toggleBag()">×</button>
+        </div>
+        
+        <!-- Bag Items -->
+        <div class="bag-items" id="bagList">
+            <div class="empty-bag">
+                <i class="fas fa-shopping-bag"></i>
+                <p data-key="empty_bag">Keranjang Anda kosong</p>
+                <p class="empty-subtext" data-key="empty_subtext">Tambahkan beberapa item lezat untuk memulai!</p>
+            </div>
+        </div>
+        
+        <!-- Bag Summary -->
+        <div class="bag-summary" id="bagSummary" style="display: none;">
+            <div class="summary-row">
+                <span data-key="subtotal">Subtotal</span>
+                <span id="subtotalPrice">Rp 0</span>
+            </div>
+            <div class="summary-row discount-row" id="discountRow" style="display: none;">
+                <span data-key="discount">Diskon</span>
+                <span id="discountAmount">-Rp 0</span>
+            </div>
+            <div class="summary-row">
+                <span id="taxLabel">PPN (10%)</span>
+                <span id="taxAmount">Rp 0</span>
+            </div>
+            <div class="summary-row">
+                <span id="serviceLabel">Service Charge (5%)</span>
+                <span id="serviceAmount">Rp 0</span>
+            </div>
+            <div class="summary-row total-row">
+                <span data-key="est_total">TOTAL PERKIRAAN</span>
+                <span id="totalPrice">Rp 0</span>
+            </div>
+        </div>
+        
+        <!-- Checkout Form (Hidden when empty) -->
+        <div class="checkout-form" id="checkoutForm">
+            <!-- Method Selection -->
+            <div class="method-selection">
+                <h3 data-key="select_method">Pilih Metode Pesanan</h3>
+                <div class="method-buttons">
+                    <button class="method-btn" onclick="selectMethod('reservation')">
+                        <i class="fas fa-calendar-check"></i>
+                        <span data-key="reservation">Reservasi</span>
+                    </button>
+                    <button class="method-btn" onclick="selectMethod('dinein')">
+                        <i class="fas fa-utensils"></i>
+                        <span data-key="dinein">Makan di Tempat</span>
+                    </button>
+                    <button class="method-btn" onclick="selectMethod('takeaway')">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span data-key="takeaway">Bawa Pulang</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Dynamic Form -->
+            <div class="dynamic-form" id="dynamicForm">
+                <!-- Forms will be loaded here based on selected method -->
+            </div>
+        </div>
+        
+        <!-- Bag Footer -->
+        <div class="bag-footer">
+            <button onclick="processCheckout()" class="checkout-btn" id="checkoutButton" disabled>
+                <i class="fas fa-lock"></i>
+                <span data-key="confirm_btn">KONFIRMASI PESANAN</span>
+            </button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
